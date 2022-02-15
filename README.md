@@ -1,5 +1,5 @@
 # GAIC-PyTorch
-This is a PyTorch implementation of [Grid Anchor based Image Cropping: A New Benchmark and An Efficient Model](https://arxiv.org/pdf/1909.08989.pdf?ref=https://githubhelp.com), which is the journal version and extension of [Reliable and Efficient Image Cropping: A Grid Anchor based Approach](https://arxiv.org/pdf/1904.04441.pdf). 
+This is an unofficial PyTorch implementation of [Grid Anchor based Image Cropping: A New Benchmark and An Efficient Model](https://arxiv.org/pdf/1909.08989.pdf?ref=https://githubhelp.com), which is the journal version and extension of [Reliable and Efficient Image Cropping: A Grid Anchor based Approach](https://arxiv.org/pdf/1904.04441.pdf). 
 We provide demo code to produce the best cropping results with different aspect ratios (1:1, 4:3, and 16:9) for arbitrary test images.
 Moreover, this code is also able to generate crops with arbitrary specified aspect ratios.
 
@@ -59,9 +59,10 @@ cd $PRJ_ROOT
 python train/train.py --gpu 0 --backbone vgg16
 # or just running python train/train.py
 ```
+The model performance for each epoch is also recorded in ``*.csv`` file under the produced ``experiments`` folder.
 More model parameters and experimental settings can be found in ``config/GAIC_params.yaml``. 
 
-3. Evaluate the pretrained model and reproduce the above quantitative results.
+3. Evaluate the pretrained model and reproduce the below quantitative results.
 ```Shell
 cd $PRJ_ROOT
 python evaluate/test.py 
