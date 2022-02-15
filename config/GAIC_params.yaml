@@ -1,0 +1,19 @@
+alignsize: 9
+backbone: vgg16
+batch_size: 1
+data_augmentation: true
+display_freq: 200
+eval_freq: 1
+gpu_id: 0
+image_size:
+- 256
+- 256
+keep_aspect_ratio: true
+lr: 1.0e-4
+lr_decay: 0.1
+lr_decay_epoch: [81]
+max_epoch: 80
+num_workers: 8
+reddim: 32
+save_freq: 81
+weight_decay: 1.0e-4
