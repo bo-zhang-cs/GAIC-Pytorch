@@ -207,7 +207,7 @@ def cropping_rank_loss(pre_score, gt_score):
     pair_num = N * (N-1) / 2
     pre_diff = pre_score[:,None] - pre_score[None,:]
     gt_diff  = gt_score[:,None]  - gt_score[None,:]
-    indicat  = -1 * torch.sin(gt_diff) * (pre_diff - gt_diff)
+    indicat  = -1 * torch.sign(gt_diff) * (pre_diff - gt_diff)
     diff     = torch.maximum(indicat, torch.zeros_like(indicat))
     rank_loss= torch.sum(diff) / pair_num
     return rank_loss
